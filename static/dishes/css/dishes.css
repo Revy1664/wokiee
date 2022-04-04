@@ -71,11 +71,6 @@ nav .icons a {
 	padding: 0 10px;
 }
 
-.dropbtn {
-  	font-size: 16px;
-  	border: none;
-}
-
 .dropdown {
   position: relative;
   display: inline-block;
@@ -107,8 +102,8 @@ nav .icons a {
 	display: block;
 }
 
-.dropdown:hover .dropbtn {
-	background-color: #3e8e41;
+.mobile-bar-user {
+	display: none;
 }
 
 /* ----------index---------- */
@@ -805,10 +800,7 @@ div.footer2 footer div#hide-content-4 button {
 	div.posts-gallery {
 		grid-template-columns: repeat(3, 1fr);
 	}
-	header div.hamburger {
-		display: block;
-		width: calc(100px + (200 - 100) * ((100vw - 320px) / (1020 - 320)));
-	}
+
 
 	nav .logo {
 		display: none;
@@ -823,7 +815,7 @@ div.footer2 footer div#hide-content-4 button {
 	}
 
 	nav ul {
-		opacity: 0;
+		/*opacity: 0;*/
 		max-height: 0px;
 		overflow: hidden;
 		visibility: none;
@@ -835,6 +827,30 @@ div.footer2 footer div#hide-content-4 button {
 		flex-direction: column;
 		background-color: #333333;
 		margin-left: -100%;
+	}
+
+	.dropdown-menu {
+		background-color: #393939;
+		min-height: 250px;
+		transition: none;
+	}
+
+	.dropdown-menu li:hover {
+		background-color: #393939;
+	}
+
+	.dropdown-menu li a {
+		color: #fff;
+		font-family: 'Roboto', sans-serif;
+		font-size: 16px;
+	}
+
+	.dropdown-menu li a:hover {
+		color: #fabf00;
+	}
+
+	.dropdown-content a {
+    	color: #000;
 	}
 
 	nav ul.active {
@@ -857,13 +873,24 @@ div.footer2 footer div#hide-content-4 button {
 	}
 
 
-	nav ul.active li a {
+	nav ul.active  li a {
 		display: block;
 		color: #fff;
 		font-size: 20px;
 		margin: 0px;
 	}
 
+	.dropdown-content {
+		margin: 0px 0px 0px 15px;
+	}
+
+	.dropdown-content a {
+		color: #000 !important;
+	}
+
+	.dropdown-content a:hover {
+		color: #fff !important;
+	}
 
 	nav ul.active li a:hover {
 		color: #fabf00;
